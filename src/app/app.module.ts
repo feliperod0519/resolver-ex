@@ -9,13 +9,17 @@ import { TopComponent } from './top/top.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './post/post.component';
+import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TopComponent,
-    PostComponent
+    PostComponent,
+    ProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

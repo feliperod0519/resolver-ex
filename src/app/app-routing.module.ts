@@ -7,11 +7,17 @@ import { TopComponent } from './top/top.component';
 
 import { PostResolver } from './post.resolver';
 import { PostComponent } from './post/post.component';
+import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
   { path: '', pathMatch:'full', component: HomeComponent },
   { path: 'top', component: TopComponent, resolve: { message: NewsResolver } },
-  { path: 'post/:id', component: PostComponent, resolve: { newsData:PostResolver }}
+  { path: 'post/:id', component: PostComponent, resolve: { newsData:PostResolver }},
+  { path: 'products', component: ProductComponent, 
+          children: [
+                      {path:'detail/:id', component: ProductDetailComponent}
+                    ]}
 ];
 
 @NgModule({
